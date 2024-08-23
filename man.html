@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Fabrication Order Management</title>
+    <link rel="stylesheet" href="man.css">
+</head>
+<body>
+    <header>
+        <h1>Fabrication Order Management</h1>
+    </header>
+
+    <section id="order-form">
+        <h2>Place New Order</h2>
+        <form id="new-order-form">
+            <label for="clientName">Client Name:</label>
+            <input type="text" id="clientName" required>
+
+            <label for="orderDescription">Order Description:</label>
+            <textarea id="orderDescription" required></textarea>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" required>
+
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" required>
+
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <div id="order-preview">
+            <h3>Order Preview</h3>
+            <p><strong>Client Name:</strong></p>
+            <p><strong>Order Description:</strong></p>
+            <p><strong>Quantity:</strong></p>
+            <p><strong>Due Date:</strong></p>
+        </div>
+    </section>
+
+    <section id="order-list">
+        <h2>Current Orders</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>  Order ID    </th>
+                    <th>  Client Name   </th>
+                    <th>  Description   </th>
+                    <th>  Quantity     </th>
+                    <th>  Due Date     </th>
+                    <th>  Status       </th>
+                    <th>  Actions      </th>
+                </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+                <!-- Orders will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="man.js"></script>
+</body>
+</html>
